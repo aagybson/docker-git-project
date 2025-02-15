@@ -1,0 +1,1 @@
+node_modules/ echo .DS_Store echo .env
