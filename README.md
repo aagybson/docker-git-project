@@ -24,19 +24,19 @@ cd docker-git-project
 # Step 3: Write a Dockerfile 
 Students can use Redis or any other image they choose. Here’s an example for Redis: 
 
-#Use Redis as the base image 
+#Use Redis as the base image: 
 FROM redis:latest  
 
-#Set environment variables 
+#Set environment variables: 
 ENV ALLOW_EMPTY_PASSWORD=yes  
 
-#Expose the default Redis port 
+#Expose the default Redis port: 
 EXPOSE 6379  
 
-#Command to run Redis 
+#Command to run Redis: 
 CMD ["redis-server"]  
 
-Step 4: Build the Docker Image Locally 
+# Step 4: Build the Docker Image Locally 
 docker build -t my-redis-image . 
 
 #Verify the image: 
