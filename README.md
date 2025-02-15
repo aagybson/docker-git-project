@@ -1,4 +1,4 @@
-# docker-git-project
+# Docker-Git Project
 
 Containerization and Version Control with Docker & Git Project 
 
