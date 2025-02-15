@@ -12,44 +12,44 @@ Student will:
 5. Push the Dockerfile and project files to GitHub.
 
 Steps to Complete the Project 
-Step 1: Install Prerequisites 
+# Step 1: Install Prerequisites 
 Ensure that the student has: 
 •  A GitHub account 
 •  A Docker Hub account  
 
-Step 2: Create a Project Directory 
+# Step 2: Create a Project Directory 
 mkdir docker-git-project 
 cd docker-git-project  
 
-Step 3: Write a Dockerfile 
+# Step 3: Write a Dockerfile 
 Students can use Redis or any other image they choose. Here’s an example for Redis: 
 
-# Use Redis as the base image 
+#Use Redis as the base image 
 FROM redis:latest  
 
-# Set environment variables 
+#Set environment variables 
 ENV ALLOW_EMPTY_PASSWORD=yes  
 
-# Expose the default Redis port 
+#Expose the default Redis port 
 EXPOSE 6379  
 
-# Command to run Redis 
+#Command to run Redis 
 CMD ["redis-server"]  
 
 Step 4: Build the Docker Image Locally 
 docker build -t my-redis-image . 
 
-# Verify the image: 
+#Verify the image: 
 docker images  
 
-Step 5: Create a Docker Network & Volume 
-# Create a Docker Network  
+# Step 5: Create a Docker Network & Volume 
+#Create a Docker Network  
 docker network create my-Jibola-network 
 
-# Create a Docker Volume 
+#Create a Docker Volume 
 docker volume create my-Jibola-data  
 
-Step 6: Run the Docker Container with the Network & Volume 
+# Step 6: Run the Docker Container with the Network & Volume 
 docker run -d \ 
 --name my-redis-container \ 
 --network my-custom-network \ 
@@ -57,19 +57,20 @@ docker run -d \
 -p 6379:6379 \ 
 my-redis-image 
 
-# Verify that the container is running: 
+#Verify that the container is running: 
 docker ps  
 
-Step 7: Push the Image to Docker Hub 
+# Step 7: Push the Image to Docker Hub 
 1. Login to Docker Hub:
    docker login
 2. Tag the Image:
    docker tag my-redis-image <your-dockerhub-username>/my-redis-image:v1
 3. Push the Image:
    docker push <your-dockerhub-username>/my-redis-image:v1
-# Verify on Docker Hub that the image was uploaded.
 
-Step 8: Initialize a Git Repository and Push to GitHub Scope:
+#Verify on Docker Hub that the image was uploaded.
+
+# Step 8: Initialize a Git Repository and Push to GitHub Scope:
 1. Initialize Git  git init 
 2. Create a .gitignore file to ignore unnecessary files:
    echo "node_modules/" >> .gitignore
@@ -87,7 +88,7 @@ Step 8: Initialize a Git Repository and Push to GitHub Scope:
    git branch -M main
    git push -u origin main
 
-Step 9: Verify Everything 
+# Step 9: Verify Everything 
 Check Docker 
 •  Run: 
 docker ps 
