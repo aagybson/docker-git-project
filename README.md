@@ -1,6 +1,6 @@
 # Docker-Git Project
 
-Containerization and Version Control with Docker & Git Project 
+# Containerization and Version Control with Docker & Git Project 
 
 Scope: 
 
